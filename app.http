@@ -1,0 +1,103 @@
+###
+GET http://localhost:3000/todos/
+Content-Type:text/html
+
+
+###
+GET http://localhost:3000/todos/?status=TO%20DO
+Content-Type:application/json
+
+
+###
+//GET http://localhost:3000/todos/?status=To%20Garden
+
+###
+GET http://localhost:3000/todos/?priority=HIGH;
+Content-Type: application/json
+//this is with the empty list
+
+###
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+Content-Type:application/json
+
+
+###
+GET http://localhost:3000/todos/?search_q=Buy
+Content-Type: application/json
+
+
+###
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+Content-Type: application/json
+
+###
+GET http://localhost:3000/todos/?category=HOME
+Content-Type:application/json
+
+###
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+Content-Type:application/json
+
+
+###
+GET http://localhost:3000/todos/4/
+Content-Type:application/json
+
+
+###
+GET http://localhost:3000/agenda/?date=2021-02-22
+//this one I didn't understand how to do
+
+
+###
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 6,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-02-22"
+}
+
+###
+PUT http://localhost:3000/todos/4/
+
+{
+    "status":"Done"
+}
+//For these url's with put it has to come what column is updated na but only "'' updated" is coming. For all the url's with put.
+
+###
+PUT http://localhost:3000/todos/3/
+
+{
+    "priority":"HIGH"
+}
+
+###
+PUT http://localhost:3000/todos/6/
+
+{
+    "todo":"Clean the garden"
+}
+
+###
+PUT http://localhost:3000/todos/3/
+
+{
+    "category":"LEARNING"
+}
+
+
+###
+PUT http://localhost:3000/todos/8/
+
+{
+      "dueDate": "2021-01-12"
+}
+
+###
+DELETE http://localhost:3000/todos/6/
